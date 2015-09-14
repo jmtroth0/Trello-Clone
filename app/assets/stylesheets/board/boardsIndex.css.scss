@@ -1,0 +1,77 @@
+
+div.indexContainer {
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+div.indexContainer > h1 {
+  font-size: 1pc;
+  font-weight: 700;
+  line-height: 24px;
+  color: #4d4d4d;
+}
+
+div.indexContainer > h1:before {
+  margin-right: 3px;
+  content: '\e623';
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  width: 30px;
+  font-family: trellicons;
+  font-weight: 400;
+  color: #999;
+}
+
+li.indexListItem {
+  position: relative;
+  float: left;
+}
+
+li.indexListItem > a {
+  background: #0079BF;
+  display: block;
+  color: white;
+  font-size: 1pc;
+  font-weight: 700;
+  min-height: 100px;
+  min-width: 140px;
+  margin: 1pc 1pc 0 0;
+  padding: 8px 80px 0 9pt;
+  border-radius: 3px;
+  background-size: cover;
+  background-position: center center
+}
+
+li.indexListItem > button.delete {
+  color: black;
+  display: none;
+}
+
+li.indexListItem:hover > a {
+  background: #0069a6;
+  cursor: pointer;
+}
+
+li.indexListItem:hover > button.delete {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+div.indexContainer > a {
+  position: relative;
+  float: left;
+  background: #eee;
+  color: #aaa;
+  font-size: 1pc;
+  font-weight: 700;
+  min-height: 110px;
+  min-width: 250px;
+  margin: 1pc 1pc 0 0;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 5pc;
+}

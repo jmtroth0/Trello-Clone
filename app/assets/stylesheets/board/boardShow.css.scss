@@ -1,0 +1,64 @@
+
+div.boardShowContainer {
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.boardShowContainer > h1 {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 0 auto;
+  min-height: 19px;
+  min-width: 30px;
+}
+
+div#main ul.board-lists li.listListItem {
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  background: #eee;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0 2px 2px 0 #eee;
+}
+
+li.cardListItem {
+  background: white;
+  padding: 4px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  box-shadow: 0 2px 2px 0 #eee;
+  position: relative;
+}
+
+button.deleteCard {
+  display:none;
+}
+
+li.cardListItem:hover button.deleteCard {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: -2px
+}
+
+li.cardListItem {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+p.card-description {
+  font-size: 10px;
+  margin: -5px 0 0 0;
+}
+
+// button.deleteList {
+//   background: white;
+//   font-size: 20px;
+//   margin: 5px;
+//   padding: 5px;
+//   border: 1px solid black;
+//   border-radius: 4px;
+// }
