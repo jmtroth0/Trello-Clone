@@ -6,6 +6,7 @@ TrelloClone.Views.BoardsList = Backbone.CompositeView.extend({
   events: {
     "click button.deleteList": "destroyList",
     "click button.addCard": "popUpCardForm",
+    "click button.cancel": "cancelForm",
   },
 
   initialize: function (options) {
@@ -31,9 +32,8 @@ TrelloClone.Views.BoardsList = Backbone.CompositeView.extend({
   addCard: function (card) {
     var cardView = new TrelloClone.Views.ListCard( { card: card })
     this.addSubview("ul.list-cards", cardView);
-    if (this.newCardView){
-      this.removeSubview("div.newCardContainer", this.newCardView);
-      this.newCardView = null;
+    if (this._newCardView){
+      this.cancelForm();
     };
   },
 
@@ -42,12 +42,17 @@ TrelloClone.Views.BoardsList = Backbone.CompositeView.extend({
   },
 
   popUpCardForm: function (e) {
-    this.newCardView = new TrelloClone.Views.NewCard({
+    this._newCardView = new TrelloClone.Views.NewCard({
       card: new TrelloClone.Models.Card(),
       cards: this.cards,
       list: this.list
     });
-    this.addSubview("div.newCardContainer", this.newCardView);
+    this.addSubview("div.newCardContainer", this._newCardView);
     return this;
   },
+
+  cancelForm: function () {
+    this.removeSubview("div.newCardContainer", this._newCardView)
+    this._newCardView = null;
+  }
 })

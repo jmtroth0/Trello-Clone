@@ -18,7 +18,7 @@ TrelloClone.Views.ShowBoard = Backbone.CompositeView.extend({
     var lists = this.board.lists();
 
     if (lists) {
-      this.board.lists().each(function(list){
+      this.board.lists().sort().each(function(list){
         this.addList(list);
       }.bind(this));
     };
@@ -50,7 +50,7 @@ TrelloClone.Views.ShowBoard = Backbone.CompositeView.extend({
   },
 
   deleteBoard: function (e) {
-    e.preventDefault
+    e.preventDefault();
     this.board.destroy();
     Backbone.history.navigate("", { trigger: true });
   },

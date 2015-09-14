@@ -30,12 +30,29 @@ li.cardListItem:hover button.deleteCard {
   display: block;
 }
 
+button.deleteCard:hover {
+  color: red;
+}
+
 li.cardListItem:hover {
   cursor: pointer;
-  background: #eee
+  background: #eee;
 }
 
 li.cardListItem {
   font-size: 15px;
   font-weight: normal;
+}
+
+button.addCard{
+  border: none;
+  font-size: 14px;
+  background: transparent;
+  margin: 0 0 5px 5px;
+}
+
+button.addCard:hover {
+  background: #ccc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }

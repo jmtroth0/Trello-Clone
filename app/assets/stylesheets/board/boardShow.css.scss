@@ -3,7 +3,8 @@ div.backdrop {
 }
 
 div.boardShowContainer {
-  width: 900px;
+  width: 90%;
+  height: 100%;
   min-height: 500px;
   margin: 0 auto;
   position: relative;
@@ -30,57 +31,20 @@ div#main ul.board-lists li.listListItem {
   position: relative;
 }
 
-li.cardListItem {
-  position: relative;
-}
-
-li.cardListItem a.displayCard {
-  background: white;
-  padding: 4px;
-  margin: 5px;
-  border-radius: 5px;
-  min-width: 200px;
-  font-size: 15px;
-  box-shadow: 0 2px 2px 0 #aaa;
-  position: relative;
+div.board-show-utils {
+  width: 150px;
+  height: 20px;
   display: block;
-}
-
-button.deleteCard {
-  display:none;
   position: absolute;
-  z-index: 1;
-  bottom: 0;
-  right: 0;
-  color: white;
-  background: green;
-  font-weight: 1400;
+  margin: auto 0;
+  bottom: 40px;
 }
-
-li.cardListItem:hover button.deleteCard {
-  display: block;
+div.board-show-utils > a.newList:hover {
+  color: #00d000;
 }
-
-li.cardListItem:hover {
-  cursor: pointer;
-  background: #eee
+div.board-show-utils > a.deleteBoard:hover {
+  color: red;
 }
-
-li.cardListItem {
-  font-size: 15px;
-  font-weight: normal;
+div.board-show-utils > a.indexReturn:hover {
+  color: orange;
 }
-
-p.card-description {
-  font-size: 10px;
-  margin: -5px 0 0 0;
-}
-
-// button.deleteList {
-//   background: white;
-//   font-size: 20px;
-//   margin: 5px;
-//   padding: 5px;
-//   border: 1px solid black;
-//   border-radius: 4px;
-// }

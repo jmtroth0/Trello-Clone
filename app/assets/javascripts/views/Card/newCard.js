@@ -10,7 +10,7 @@ TrelloClone.Views.NewCard = Backbone.View.extend({
   },
 
   events: {
-    'submit form': 'submit'
+    'submit form': 'submit',
   },
 
   render: function () {
@@ -25,7 +25,7 @@ TrelloClone.Views.NewCard = Backbone.View.extend({
     this.card.save(attrs, {
       success: function () {
         this.list.cards().add(this.card);
-        
+
       }.bind(this),
 
       error: function (model) {
