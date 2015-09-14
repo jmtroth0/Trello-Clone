@@ -18,6 +18,24 @@ div.boardShowContainer {
   margin: 10px 10px;
   min-height: 19px;
   min-width: 30px;
+  display: inline;
+}
+
+.boardShowContainer > a {
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+a.deleteBoard:hover {
+  color: red;
+}
+
+a.newList:hover {
+  color: #00d000;
+}
+
+a.indexReturn:hover {
+  color: orange;
 }
 
 div#main ul.board-lists li.listListItem {
@@ -38,13 +56,4 @@ div.board-show-utils {
   position: absolute;
   margin: auto 0;
   bottom: 40px;
-}
-div.board-show-utils > a.newList:hover {
-  color: #00d000;
-}
-div.board-show-utils > a.deleteBoard:hover {
-  color: red;
-}
-div.board-show-utils > a.indexReturn:hover {
-  color: orange;
 }

@@ -1,13 +1,7 @@
 <h1><%= board.escape('title') %></h1>
+<a href="/#/boards/<%=board.id%>/lists/new" class="newList">
+  Make New List
+</a>
+<a href="#" class="indexReturn">Back To My Boards</a>
+<a href="#" class="deleteBoard">Delete Board</a>
 <ul class="board-lists"></ul>
-
-
-<div class='board-show-utils'>
-  <a href="/#/boards/<%=board.id%>/lists/new" class="newList">
-    Make New List
-  </a>
-  <br>
-  <a href="#" class="deleteBoard">Delete Board</button>
-  <br>
-  <a href="#" class="indexReturn">Back To My Boards</a>
-</div>

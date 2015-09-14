@@ -16,7 +16,20 @@ TrelloClone.Views.BoardsList = Backbone.CompositeView.extend({
     this.listenTo(this.list.cards(), 'remove', this.render)
   },
 
-  render: function () {
+  // render: function () {
+  //   this.$el.html(this.template({list: this.list}));
+  //   var cards = this.list.cards();
+  //
+  //   if (cards) {
+  //     cards.sort().each(function (card) {
+  //       this.addCard(card);
+  //     }.bind(this));
+  //   };
+  //
+  //   return this;
+  // },
+
+  render: function () { //draggable?
     this.$el.html(this.template({list: this.list}));
     var cards = this.list.cards();
 

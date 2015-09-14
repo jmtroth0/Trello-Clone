@@ -23,6 +23,8 @@ TrelloClone.Views.ShowBoard = Backbone.CompositeView.extend({
       }.bind(this));
     };
 
+    this.listsDraggable();
+    this.cardsDraggable();
     return this;
   },
 
@@ -30,6 +32,30 @@ TrelloClone.Views.ShowBoard = Backbone.CompositeView.extend({
     var listView = new TrelloClone.Views.BoardsList({list: list})
     this.addSubview("ul.board-lists", listView);
   },
+
+  listsDraggable: function () {
+    $("li.listListItem").draggable({
+      revert: true,
+      drop: function() {
+        console.log("Landed at: " + $(this).position());
+      }
+    });
+    $("ul.board-lists").droppable({
+      accept: "li.listListItem"
+    })
+  },
+
+  cardsDraggable: function () {
+      $("li.cardListItem").draggable({
+        revert: true,
+        drop: function() {
+          console.log("Landed at: " + $(this).position());
+        }
+      });
+      $("ul.list-cards").droppable({
+        accept: "li.cardListItem"
+      })
+    },
 
   indexReturn: function (e) {
     e.preventDefault();

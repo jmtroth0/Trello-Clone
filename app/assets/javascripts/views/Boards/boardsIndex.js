@@ -8,6 +8,7 @@ TrelloClone.Views.BoardsIndex = Backbone.CompositeView.extend({
 
   events: {
     "click a.newBoard": "popUpBoardForm",
+    "click button.cancel": "cancelForm",
   },
 
   render: function () {
@@ -30,13 +31,16 @@ TrelloClone.Views.BoardsIndex = Backbone.CompositeView.extend({
 
   popUpBoardForm: function (e) {
     e.preventDefault();
-    // $newBoardEl = this.$el.find("div.newBoardContainer")
-    var newBoardView = new TrelloClone.Views.NewBoard({
+    this._newBoardView = new TrelloClone.Views.NewBoard({
       board: new TrelloClone.Models.Board(),
       boards: this.boards
     });
-    // $newBoardEl.html(newBoardView.render().$el)
-    this.addSubview("div.newBoardContainer", newBoardView);
+    this.addSubview("div.newBoardContainer", this._newBoardView);
     return this;
   },
+
+  cancelForm: function () {
+    this.removeSubview("div.newBoardContainer", this._newBoardView)
+    this._newBoardView = null;
+  }
 })
