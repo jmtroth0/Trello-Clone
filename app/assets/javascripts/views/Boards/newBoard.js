@@ -1,5 +1,6 @@
 TrelloClone.Views.NewBoard = Backbone.View.extend({
-  template: JST["boardForm"],
+  template: JST["_boardForm"],
+  className: "newBoard",
 
   initialize: function (options) {
     this.board = options.board;

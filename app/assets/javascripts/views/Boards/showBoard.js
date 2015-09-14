@@ -4,7 +4,8 @@ TrelloClone.Views.ShowBoard = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.board = options.board;
-    this.listenTo(this.board, 'sync destroy remove', this.render)
+    this.listenTo(this.board, 'sync', this.render);
+    this.listenTo(this.board.lists(), 'remove', this.deleteList);
   },
 
   events: {
@@ -41,6 +42,11 @@ TrelloClone.Views.ShowBoard = Backbone.CompositeView.extend({
       "/boards/" + this.board.id + "/lists/new/",
       {trigger: true}
     );
+  },
+
+  deleteList: function (model) {
+    this.removeModelSubview("ul.board-lists", model);
+    this.render();
   },
 
   deleteBoard: function (e) {

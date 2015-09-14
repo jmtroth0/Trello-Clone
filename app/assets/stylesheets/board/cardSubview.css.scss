@@ -1,0 +1,41 @@
+
+li.cardListItem {
+  position: relative;
+}
+
+li.cardListItem a.displayCard {
+  background: white;
+  padding: 4px;
+  margin: 5px;
+  border-radius: 5px;
+  min-width: 200px;
+  font-size: 15px;
+  box-shadow: 0 2px 2px 0 #aaa;
+  position: relative;
+  display: block;
+}
+
+button.deleteCard {
+  display:none;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background: green;
+  font-weight: 1400;
+}
+
+li.cardListItem:hover button.deleteCard {
+  display: block;
+}
+
+li.cardListItem:hover {
+  cursor: pointer;
+  background: #eee
+}
+
+li.cardListItem {
+  font-size: 15px;
+  font-weight: normal;
+}

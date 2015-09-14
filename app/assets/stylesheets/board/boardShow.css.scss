@@ -1,14 +1,20 @@
+div.backdrop {
+  background: #0079BF;
+}
 
 div.boardShowContainer {
   width: 900px;
+  min-height: 500px;
   margin: 0 auto;
   position: relative;
+  display: block;
 }
 
 .boardShowContainer > h1 {
   font-size: 18px;
+  color: white;
   font-weight: bolder;
-  margin: 0 auto;
+  margin: 10px 10px;
   min-height: 19px;
   min-width: 30px;
 }
@@ -21,27 +27,43 @@ div#main ul.board-lists li.listListItem {
   border-radius: 5px;
   font-size: 20px;
   box-shadow: 0 2px 2px 0 #eee;
+  position: relative;
 }
 
 li.cardListItem {
+  position: relative;
+}
+
+li.cardListItem a.displayCard {
   background: white;
   padding: 4px;
   margin: 5px;
   border-radius: 5px;
+  min-width: 200px;
   font-size: 15px;
-  box-shadow: 0 2px 2px 0 #eee;
+  box-shadow: 0 2px 2px 0 #aaa;
   position: relative;
+  display: block;
 }
 
 button.deleteCard {
   display:none;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background: green;
+  font-weight: 1400;
 }
 
 li.cardListItem:hover button.deleteCard {
   display: block;
-  position: absolute;
-  z-index: 1;
-  bottom: -2px
+}
+
+li.cardListItem:hover {
+  cursor: pointer;
+  background: #eee
 }
 
 li.cardListItem {

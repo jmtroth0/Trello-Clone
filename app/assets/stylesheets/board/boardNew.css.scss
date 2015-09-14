@@ -1,0 +1,41 @@
+div.newBoard {
+  display: block;
+  position: absolute;
+}
+
+div.indexContainer > div.newBoardContainer {
+  position: relative;
+  float: left;
+  min-height: 110px;
+  min-width: 250px;
+  display: block;
+  z-index: 20;
+  background: white;
+}
+
+div.newBoard {
+  top: 17px;
+  background: white;
+  min-height: 110px;
+  min-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 #eee;
+}
+
+div.newBoardContainer a.newBoard {
+  display: block;
+  background: #eee;
+  margin: 1pc 1pc 0 0;
+  color: #aaa;
+  font-size: 1pc;
+  min-height: 110px;
+  min-width: 225px;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 5pc;
+}
+
+div.newBoard input#title {
+}

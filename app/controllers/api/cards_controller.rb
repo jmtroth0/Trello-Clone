@@ -12,6 +12,12 @@ module Api
       end
     end
 
+    def destroy
+      @card = Card.find(params[:id])
+      @card.destroy
+      render json: {}
+    end
+
     def update
       @card = Card.find(params[:id])
       if @card.update_attributes(card_params)

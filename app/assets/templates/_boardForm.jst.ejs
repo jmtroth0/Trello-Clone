@@ -1,16 +1,17 @@
-<h1><%= board.id ? "Edit Board" : "New Board" %></h1>
+<h1><%= board.id ? "Edit Board" : "Create Board" %></h1>
 
 <p class='errors'></p>
 
 <form>
   <label for="title">Title</label>
+  <br>
   <input
     id="title"
     type="text"
     name="title"
     value="<%= board.escape("title") %>">
-
+  <br>
   <input
     type="submit"
-    value="submit">
+    value="Create">
 </form>
